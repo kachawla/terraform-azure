@@ -30,7 +30,7 @@ resource "azurerm_cosmosdb_account" "this" {
 
 output "account_id" {
   value = (
-    length(azurerm_cosmosdb_account.kachawla-tf-test-account) > 0 ?
+    length(azurerm_cosmosdb_account.this) > 0 ?
     azurerm_cosmosdb_account.this.id : ""
   )
   description = "Resource identifier of the instance of CosmosDB account."
