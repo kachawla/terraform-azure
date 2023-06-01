@@ -14,7 +14,7 @@ variable "redis_cache_name" {
 }
 
 variable "capacity" {
-  type = number
+  type = int
   description = "Size of the Redis Cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4)."
   default = 0
 }
