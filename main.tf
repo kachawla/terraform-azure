@@ -28,10 +28,25 @@ resource "azurerm_cosmosdb_account" "this" {
   }
 }
 
+resource "azurerm_cosmosdb_mongo_database" "this" {
+  name                = var.db_name
+  resource_group_name = var.resource_group_name
+  account_name        = azurerm_cosmosdb_account.this.name
+}
+
 output "account_id" {
-  value = (
-    length(azurerm_cosmosdb_account.this) > 0 ?
-    azurerm_cosmosdb_account.this.id : ""
-  )
+  value = azurerm_cosmosdb_account.this.id
   description = "Resource identifier of the instance of CosmosDB account."
+}
+
+output "host" {
+  value = azurerm_cosmosdb_account.this.endpoint
+}
+
+output "port" {
+  value = 443
+}
+
+output "database" {
+  value = azurerm_cosmosdb_mongo_database.this.name
 }
