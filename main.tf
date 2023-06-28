@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+provider "azurerm" {
+  features {}
+}
+
 resource "azurerm_redis_cache" "cache" {
   name                = var.redis_cache_name
   location            = var.location
