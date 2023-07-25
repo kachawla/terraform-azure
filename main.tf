@@ -1,3 +1,8 @@
+provider "azurerm" {
+  features {}
+  subscription_id = "<test>"
+}
+
 resource "azurerm_redis_cache" "cache" {
   name                = var.redis_cache_name
   location            = var.location
