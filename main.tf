@@ -1,6 +1,5 @@
 provider "azurerm" {
   features {}
-  subscription_id = "<test>"
 }
 
 resource "azurerm_redis_cache" "cache" {
