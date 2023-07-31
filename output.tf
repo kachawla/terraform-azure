@@ -1,3 +1,7 @@
+output "id" {
+  value = azurerm_redis_cache.cache.id
+}
+
 output "host" {
   value = azurerm_redis_cache.cache.hostname
 }
