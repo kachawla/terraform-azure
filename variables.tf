@@ -25,11 +25,11 @@ variable "family" {
   default = "C"
 }
 
-variable "context" {
-  type = object({
-    resourcegroup = string
-  })
-}
+// variable "context" {
+//  type = object({
+//    resourcegroup = string
+//  })
+// }
 
 variable "sku_name" {
   type        = string
