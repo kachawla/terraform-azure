@@ -25,12 +25,6 @@ variable "family" {
   default = "C"
 }
 
-// variable "context" {
-//  type = object({
-//    resourcegroup = string
-//  })
-// }
-
 variable "sku_name" {
   type        = string
   description = "The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)"
